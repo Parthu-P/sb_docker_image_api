@@ -1,7 +1,7 @@
-FROM openjdk:17
+FROM openjdk:11
 
-COPY usr/app/target/app.jar usr/app/app.jar
+COPY target/dockerapp.jar  /usr/app/
 
-WORKDIR /usr/app
+WORKDIR /usr/app/
 
-ENTRYPOINT [ "java","-jar","app.jar" ]
+ENTRYPOINT ["java", "-jar", "dockerapp.jar"]

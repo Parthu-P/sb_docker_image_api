@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DockerRestController {
 
-	@GetMapping("/msg/{name}")
+	@GetMapping("/{name}")
 	public String getMsg(@PathVariable String name) {
 		return "Hi, "+name+"  Good Evening";
 	}
